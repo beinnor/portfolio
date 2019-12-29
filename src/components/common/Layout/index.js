@@ -8,18 +8,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { GlobalStyle } from '../theme/globalStyle';
+import { GlobalStyle } from '../../../theme/globalStyle';
 
-const Layout = ({ children }) => {
+import Footer from '../../Footer';
+
+export const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </>
   );
 };
@@ -27,5 +25,3 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

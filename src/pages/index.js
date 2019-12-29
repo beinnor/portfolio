@@ -1,10 +1,6 @@
 import React from 'react';
-import SEO from '../components/seo';
-import Layout from '../components/layout';
-import Landing from '../components/landing/landing';
-import About from '../components/about/about';
-import Portfolio from '../components/portfolio/portfolio';
-import Contact from '../components/contact/contact';
+import { SEO, Layout } from '../components/common';
+import { Landing, About, Portfolio, Contact } from '../components/sections';
 
 const IndexPage = () => (
   <Layout>

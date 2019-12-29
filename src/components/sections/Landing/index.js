@@ -6,17 +6,14 @@ import {
   FaLinkedin,
   FaFreeCodeCamp,
 } from 'react-icons/fa';
-import styled from 'styled-components';
 
-const Wrapper = styled.section`
-  height: 100vh;
-`;
+import { Wrapper, Headline, SubHeadline, SocialIcons } from './styles';
 
-const Landing = () => (
-  <Wrapper>
-    <div class="intro">Hello, I'm Beinnor!</div>
-    <div class="tagline">All-Star Dev | Code Fanatic | Linux Hacker | Bleh</div>
-    <div class="icons-social">
+export const Landing = () => (
+  <Wrapper id="landing">
+    <Headline>Hello, I'm Beinnor!</Headline>
+    <SubHeadline>All-Star Dev | Code Fanatic | Linux Hacker | Bleh</SubHeadline>
+    <SocialIcons>
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -45,11 +42,13 @@ const Landing = () => (
       >
         <FaLinkedin />
       </a>
-      <a target="_blank" href="https://www.freecodecamp.org">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.freecodecamp.org"
+      >
         <FaFreeCodeCamp />
       </a>
-    </div>
+    </SocialIcons>
   </Wrapper>
 );
-
-export default Landing;

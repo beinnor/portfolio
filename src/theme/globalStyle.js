@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600,700');
 /* Minimal CSS Reset */
 
   html {
@@ -60,27 +60,6 @@ html {
 
 /* Custom Styles */
 
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
-}
-
-main > .intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3.75em;
-	font-weight: 600;
-}
-
-main > .tagline {
-	font-size: 1.5rem;
-	margin: 1.5rem 0;
-	font-weight: 100;
-}
-
 svg {
 	margin-bottom: -0.20rem;
 	margin-left: 0.675rem;;
@@ -89,18 +68,4 @@ svg {
   padding: 10px;
 }
 
-/* Theme */
-
-main {
-	background: #485564;
-	color: #FAFAFA;
-}
-
-.icons-social a {
-	color: #FAFAFA;
-}
-
-.icons-social a svg path{
-	fill: #FAFAFA;
-}
 `;
