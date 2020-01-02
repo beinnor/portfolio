@@ -6,13 +6,13 @@ export const Wrapper = styled.section`
 `;
 
 export const FormWrapper = styled.div`
-width: 80%;
-margin: 0 auto;
-padding-top: 7rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 7rem;
 `;
 
 export const Form = styled.form`
-background: #485564;
+  background: #485564;
   padding: 25px;
   border: 1px solid black;
   border-radius: 5px;
@@ -20,13 +20,13 @@ background: #485564;
 `;
 
 export const FormHeading = styled.h1`
-display: block;
-color: white;
-margin-bottom: 1rem;
+  display: block;
+  color: white;
+  margin-bottom: 1rem;
 `;
 
 export const Fieldset = styled.fieldset`
-border: medium none !important;
+  border: medium none !important;
   margin: 0 0 10px;
   min-width: 100%;
   padding: 0;
@@ -37,13 +37,11 @@ export const Textarea = styled.textarea`
   height: 100px;
   width: 100%;
   resize: none;
-
 `;
 
 export const Input = styled.input`
   width: 100%;
   resize: none;
-
 `;
 
 export const Button = styled.button`
