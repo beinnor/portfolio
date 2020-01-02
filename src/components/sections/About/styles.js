@@ -11,3 +11,7 @@ export const Paragraph = styled.p`
   margin-top: 1rem;
   margin-bottom: 1rem;
 `;
+
+export const ImageWrapper = styled.div`
+  width: 10rem;
+`;

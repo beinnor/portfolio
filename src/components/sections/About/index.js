@@ -1,9 +1,28 @@
 import React from 'react';
-import { Wrapper, Paragraph } from './styles';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Wrapper, ImageWrapper, Paragraph } from './styles';
+import Img from 'gatsby-image';
 
-export const About = () => (
+export const About = () => {
+
+  const portrait = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+  return (
   <Wrapper id="about">
     <h1>About</h1>
+    <ImageWrapper>
+    <Img fluid={portrait.placeholderImage.childImageSharp.fluid} />
+    </ImageWrapper>
     <Paragraph>
       I am a hobbyist coder. I love javascript and html most. But also play
       around in other languages sometimes.
@@ -20,4 +39,5 @@ export const About = () => (
       Ipsum.
     </Paragraph>
   </Wrapper>
-);
+  )
+  };

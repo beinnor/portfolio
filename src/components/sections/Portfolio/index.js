@@ -24,3 +24,75 @@ export const Portfolio = () => (
     </div>
   </Wrapper>
 );
+
+
+/*  EXAMPLE GITHUB QUERY  
+
+{
+  viewer {
+    login
+    starredRepositories(first: 100, ownedByViewer: true) {
+      edges {
+        node {
+          id
+          name
+          description
+          homepageUrl
+          url
+          isPrivate
+          languages(first: 10) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query {
+  repository(name: "repoName", owner: "repoOwner") {
+    object(expression: "branch:path/to/file") {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}
+
+{
+  viewer {
+    login
+    starredRepositories(first: 100, ownedByViewer: true) {
+      edges {
+        node {
+          id
+          name
+          description
+          homepageUrl
+          url
+          isPrivate
+          object(expression: "master:screenshot.png") {
+            ... on Blob {
+              id
+            }
+          }
+          languages(first: 3) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+*/
