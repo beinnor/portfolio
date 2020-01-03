@@ -1,7 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FaGithub } from 'react-icons/fa';
+import { GoStar, GoRepoForked } from "react-icons/go";
 
-import { Wrapper } from './styles';
+import { Wrapper, Projects, Item, Stats, Button } from './styles';
 
 export const Portfolio = () => {
   const {
@@ -24,6 +26,7 @@ export const Portfolio = () => {
                   id
                   name
                   url
+                  homepageUrl
                   description
                   stargazers {
                     totalCount
@@ -42,36 +45,26 @@ export const Portfolio = () => {
     <Wrapper id="portfolio">
       <h1>Portfolio</h1>
       <p>Some of my projects</p>
-      <div>
-        <h2>Project 1</h2>
-        <p>This is project description text.</p>
-      </div>
-      <div>
+      <Projects>
         {edges.map(({ node }) => (
-          <div
-            key={node.id}
-            as="a"
-            href={node.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>
-              <div>
-                <h4>{node.name}</h4>
-                <p>{node.description}</p>
-              </div>
-              <div>
-                <div>
-                  <span>{node.stargazers.totalCount}</span>
-                </div>
-                <div>
-                  <span>{node.forkCount}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Item key={node.id}>
+            <h3>{node.name}</h3>
+            <a href={node.homepageUrl} target="_blank"
+            rel="noopener noreferrer">
+              Here is image.
+            </a>
+            <p>{node.description}</p>
+            <Stats>
+        <div><GoStar /> {node.stargazers.totalCount}</div>
+        <div><GoRepoForked /> {node.forkCount}</div>
+            </Stats>
+            <Button href={node.url} target="_blank"
+            rel="noopener noreferrer">
+              <FaGithub></FaGithub> Github
+            </Button>
+          </Item>
         ))}
-      </div>
+      </Projects>
     </Wrapper>
   );
 };
