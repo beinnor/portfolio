@@ -37,7 +37,6 @@ export const Image = styled.div`
 export const Stats = styled.div`
   display: flex;
   flex-flow: row wrap;
-
 `;
 
 export const Button = styled.a`

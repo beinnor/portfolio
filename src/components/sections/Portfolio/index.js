@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FaGithub } from 'react-icons/fa';
-import { GoStar, GoRepoForked } from "react-icons/go";
+import { GoStar, GoRepoForked } from 'react-icons/go';
 
 import { Wrapper, Projects, Item, Stats, Button } from './styles';
 
@@ -9,7 +9,7 @@ export const Portfolio = () => {
   const {
     github: {
       viewer: {
-        repositories: { edges },
+        pinnedItems: { edges },
       },
     },
   } = useStaticQuery(
@@ -17,21 +17,24 @@ export const Portfolio = () => {
       {
         github {
           viewer {
-            repositories(
-              first: 8
-              orderBy: { field: STARGAZERS, direction: DESC }
-            ) {
+            pinnedItems(first: 6) {
               edges {
                 node {
-                  id
-                  name
-                  url
-                  homepageUrl
-                  description
-                  stargazers {
-                    totalCount
+                  ... on GitHub_Repository {
+                    id
+                    name
+                    description
+                    forkCount
+                    homepageUrl
+                    url
+                    stargazers {
+                      totalCount
+                    }
+                    owner {
+                      id                
+                      login
+                    }
                   }
-                  forkCount
                 }
               }
             }
@@ -41,25 +44,32 @@ export const Portfolio = () => {
     `
   );
 
+
   return (
     <Wrapper id="portfolio">
       <h1>Portfolio</h1>
-      <p>Some of my projects</p>
+      <p>My pinned repositories on GitHub</p>
       <Projects>
         {edges.map(({ node }) => (
           <Item key={node.id}>
             <h3>{node.name}</h3>
-            <a href={node.homepageUrl} target="_blank"
-            rel="noopener noreferrer">
-              Here is image.
+            <a
+              href={node.homepageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={`https://raw.githubusercontent.com/${node.owner.login}/${node.name}/master/screenshot.png`} />
             </a>
             <p>{node.description}</p>
             <Stats>
-        <div><GoStar /> {node.stargazers.totalCount}</div>
-        <div><GoRepoForked /> {node.forkCount}</div>
+              <div>
+                <GoStar /> {node.stargazers.totalCount}
+              </div>
+              <div>
+                <GoRepoForked /> {node.forkCount}
+              </div>
             </Stats>
-            <Button href={node.url} target="_blank"
-            rel="noopener noreferrer">
+            <Button href={node.url} target="_blank" rel="noopener noreferrer">
               <FaGithub></FaGithub> Github
             </Button>
           </Item>
