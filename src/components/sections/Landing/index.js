@@ -12,7 +12,7 @@ import { Wrapper, Headline, SubHeadline, SocialIcons } from './styles';
 export const Landing = () => (
   <Wrapper id="landing">
     <Headline>Hello, I'm Beinnor!</Headline>
-    <SubHeadline>All-Star Dev | Code Fanatic | Linux Hacker | Bleh</SubHeadline>
+    <SubHeadline>Web Developer | Linux User | Bleh</SubHeadline>
     <SocialIcons>
       <a
         target="_blank"
