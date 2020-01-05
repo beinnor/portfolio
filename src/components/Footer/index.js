@@ -33,35 +33,35 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/flexdinesh"
+            href="https://github.com/beinnor"
           >
             <FaGithub />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://twitter.com/flexdinesh"
+            href="https://twitter.com/ronniebjork"
           >
             <FaTwitter />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://dev.to/flexdinesh"
+            href="https://dev.to/beinnor"
           >
             <FaDev />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/dineshpandiyan"
+            href="https://www.linkedin.com/in/ronnie-bjørkelund-68161017a"
           >
             <FaLinkedin />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.freecodecamp.org"
+            href="https://www.freecodecamp.org/beinnor"
           >
             <FaFreeCodeCamp />
           </a>
