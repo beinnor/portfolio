@@ -31,7 +31,7 @@ export const Portfolio = () => {
                       totalCount
                     }
                     owner {
-                      id                
+                      id
                       login
                     }
                   }
@@ -43,7 +43,6 @@ export const Portfolio = () => {
       }
     `
   );
-
 
   return (
     <Wrapper id="portfolio">
@@ -58,7 +57,9 @@ export const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={`https://raw.githubusercontent.com/${node.owner.login}/${node.name}/master/screenshot.png`} />
+              <img
+                src={`https://raw.githubusercontent.com/${node.owner.login}/${node.name}/master/screenshot.png`}
+              />
             </a>
             <p>{node.description}</p>
             <Stats>
