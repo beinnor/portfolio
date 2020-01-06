@@ -57,21 +57,24 @@ export const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
+              Live
               <img
                 src={`https://raw.githubusercontent.com/${node.owner.login}/${node.name}/master/screenshot.png`}
+                alt={`Screenshot of ${node.name}`}
               />
             </a>
             <p>{node.description}</p>
             <Stats>
               <div>
-                <GoStar /> {node.stargazers.totalCount}
+                <GoStar>{node.stargazers.totalCount}</GoStar>
               </div>
               <div>
-                <GoRepoForked /> {node.forkCount}
+                <GoRepoForked>{node.forkCount}</GoRepoForked>
               </div>
             </Stats>
             <Button href={node.url} target="_blank" rel="noopener noreferrer">
-              <FaGithub></FaGithub> Github
+              <FaGithub />
+              Github
             </Button>
           </Item>
         ))}

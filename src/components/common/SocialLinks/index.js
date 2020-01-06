@@ -6,7 +6,7 @@ import {
   FaLinkedin,
   FaFreeCodeCamp,
 } from 'react-icons/fa';
-import { Social } from './styles';
+import { Social, HiddenText } from './styles';
 
 export const SocialLinks = () => (
   <Social>
@@ -15,6 +15,7 @@ export const SocialLinks = () => (
       rel="noopener noreferrer"
       href="https://github.com/beinnor"
     >
+      <HiddenText>Github</HiddenText>
       <FaGithub />
     </a>
     <a
@@ -22,16 +23,19 @@ export const SocialLinks = () => (
       rel="noopener noreferrer"
       href="https://twitter.com/ronniebjork"
     >
+      <HiddenText>Twitter</HiddenText>
       <FaTwitter />
     </a>
     <a target="_blank" rel="noopener noreferrer" href="https://dev.to/beinnor">
+      <HiddenText>Dev.to</HiddenText>
       <FaDev />
     </a>
     <a
       target="_blank"
       rel="noopener noreferrer"
-      href="linkedin.com/in/ronnie-bjørkelund-68161017a"
+      href="https://linkedin.com/in/ronnie-bjørkelund-68161017a"
     >
+      <HiddenText>LinkedIn</HiddenText>
       <FaLinkedin />
     </a>
     <a
@@ -39,6 +43,7 @@ export const SocialLinks = () => (
       rel="noopener noreferrer"
       href="https://www.freecodecamp.org/beinnor"
     >
+      <HiddenText>freeCodeCamp</HiddenText>
       <FaFreeCodeCamp />
     </a>
   </Social>

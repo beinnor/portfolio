@@ -20,7 +20,10 @@ export const About = () => {
     <Wrapper id="about">
       <h1>About</h1>
       <ImageWrapper>
-        <Img fluid={portrait.placeholderImage.childImageSharp.fluid} />
+        <Img
+          fluid={portrait.placeholderImage.childImageSharp.fluid}
+          alt="Photo of me"
+        />
       </ImageWrapper>
       <Paragraph>
         I am a hobbyist coder. I love javascript and html most. But also play

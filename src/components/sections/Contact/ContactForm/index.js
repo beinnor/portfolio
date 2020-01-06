@@ -8,6 +8,7 @@ import {
   Textarea,
   Input,
   Button,
+  Label,
 } from './styles';
 
 export const ContactForm = () => {
@@ -22,20 +23,30 @@ export const ContactForm = () => {
         <input type="hidden" name="form-name" value="contact" />
         <FormHeading>Contact me</FormHeading>
         <Fieldset>
+          <Label htmlFor="name">Name</Label>
           <Input
             placeholder="Name"
             required
-            autofocus
             type="text"
+            id="name"
             name="name"
           />
         </Fieldset>
         <Fieldset>
-          <Input placeholder="Email" required type="email" name="email" />
+          <Label htmlFor="email">Email</Label>
+          <Input
+            placeholder="Email"
+            required
+            type="email"
+            id="email"
+            name="email"
+          />
         </Fieldset>
         <Fieldset>
+          <Label htmlFor="message">Your message</Label>
           <Textarea
             placeholder="Message here...."
+            id="message"
             name="message"
             required
           ></Textarea>
