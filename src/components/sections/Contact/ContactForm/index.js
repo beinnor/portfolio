@@ -24,7 +24,6 @@ export const ContactForm = () => {
         <Fieldset>
           <Input
             placeholder="Name"
-            tabindex="1"
             required
             autofocus
             type="text"
@@ -32,19 +31,12 @@ export const ContactForm = () => {
           />
         </Fieldset>
         <Fieldset>
-          <Input
-            placeholder="Email"
-            tabindex="3"
-            required
-            type="email"
-            name="email"
-          />
+          <Input placeholder="Email" required type="email" name="email" />
         </Fieldset>
         <Fieldset>
           <Textarea
             placeholder="Message here...."
             name="message"
-            tabindex="5"
             required
           ></Textarea>
         </Fieldset>

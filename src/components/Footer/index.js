@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  FaGithub,
-  FaTwitter,
-  FaDev,
-  FaLinkedin,
-  FaFreeCodeCamp,
-} from 'react-icons/fa';
+import { SocialLinks } from '../common/SocialLinks';
 
 import { TopWrapper, BottomWrapper } from './styles';
 
@@ -29,43 +23,7 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        <div>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/flexdinesh"
-          >
-            <FaGithub />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/flexdinesh"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://dev.to/flexdinesh"
-          >
-            <FaDev />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/dineshpandiyan"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.freecodecamp.org"
-          >
-            <FaFreeCodeCamp />
-          </a>
-        </div>
+        <SocialLinks />
       </TopWrapper>
       <BottomWrapper>
         © {new Date().getFullYear()}, Built with
