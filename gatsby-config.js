@@ -11,6 +11,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-beinnor`,
+      options: {
+        apiKey: 'API_KEY_HERE',      
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -22,19 +28,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'GitHub',
-        fieldName: 'github',
-        url: 'https://api.github.com/graphql',
-        headers: {
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-        },
-        fetchOptions: {},
-      },
-    },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
