@@ -12,9 +12,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-beinnor`,
-      options: {
-        apiKey: 'API_KEY_HERE',      
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,

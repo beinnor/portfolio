@@ -1,5 +1,19 @@
 const fetch = require('node-fetch');
-const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
+const https = require('https');
+const fs = require('fs');
+
+const download = async (url, localDest) => {
+  try {
+    const res = await fetch(url);
+    const dest = fs.createWriteStream(`src/images/screenshots/${localDest}`);
+    res.body.pipe(dest);
+    console.log(`Writing ${localDest} ***`);
+  } catch (error) {
+    console.log(`Error! Couldn't get image file: ${error}`);
+    return false;
+  }
+  return true;
+};
 
 const query = `
 {
@@ -31,10 +45,11 @@ const query = `
 }
 `;
 
-exports.sourceNodes = async (
-  { actions, createNodeId, createContentDigest, store, cache }
-) => {
-  const { createNode, createNodeField } = actions;
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
   try {
     // Fetch the data
     const res = await fetch(`https://api.github.com/graphql`, {
@@ -52,10 +67,7 @@ exports.sourceNodes = async (
     const edges = data.repositoryOwner.pinnedItems.edges;
 
     // Map over the results array, calling action.createNode on each item in the array
-
     for (const repo of edges) {
-      let fileNode;
-
       const node = {
         ...repo, // We copy all of the properties from the game object
         id: await createNodeId(`repo-${repo.node.id}`), // Needs to be unique
@@ -65,24 +77,13 @@ exports.sourceNodes = async (
         },
       };
 
-      fileNode = await createRemoteFileNode({
-        url: `https://raw.githubusercontent.com/beinnor/${repo.node.name}/master/screenshot.png`,
-        store,
-        cache,
-        parentNodeId: node.id,
-        createNode,
-        createNodeId: id => `screenshot-${repo.node.name}`,
-      });
-
-      await createNodeField({
-        node: fileNode,
-        name: 'Description',
-        value: `Screenshot of '${repo.node.name}'`,
-      });
-
-
       // Create the actual data node
       await actions.createNode(node);
+
+      await download(
+        `https://raw.githubusercontent.com/beinnor/${repo.node.name}/master/screenshot.png`,
+        `screenshot-${repo.node.name}.png`
+      );
     }
   } catch (error) {
     console.log(`Error in plugin: ${error}`);

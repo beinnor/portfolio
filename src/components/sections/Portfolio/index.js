@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { FaGithub } from 'react-icons/fa';
 import { GoStar, GoRepoForked } from 'react-icons/go';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 
 import { Wrapper, Projects, Item, Stats, Button } from './styles';
 
@@ -29,15 +29,14 @@ export const Portfolio = () => {
             }
           }
         }
-        allFile(filter: { id: { regex: "/screenshot/" } }) {
-          nodes {
-            id
-            name
-            childImageSharp {
-              # Specify the image processing specifications right in the query.
-              # Makes it trivial to update as your page's design changes.
-              fixed(width: 125, height: 125) {
-                ...GatsbyImageSharpFixed
+        allFile(filter: { absolutePath: { regex: "/screenshot/" } }) {
+          edges {
+            node {
+              name
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -46,7 +45,16 @@ export const Portfolio = () => {
     `
   );
 
-  console.log(data.allFile);
+  const screenshotImage = imageName => {
+    const test = data.allFile.edges.filter(elem => {
+      if (elem.node.name === imageName) {
+        return true;
+      }
+      return false;
+    });
+
+    return <Img fluid={test[0].node.childImageSharp.fluid} />;
+  };
 
   return (
     <Wrapper id="portfolio">
@@ -61,11 +69,7 @@ export const Portfolio = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Live
-              <img
-                src={`https://raw.githubusercontent.com/${node.owner.login}/${node.name}/master/screenshot.png`}
-                alt={`Screenshot of ${node.name}`}
-              />
+              {screenshotImage(`screenshot-${node.name}`)}
             </a>
             <p>{node.description}</p>
             <Stats>
