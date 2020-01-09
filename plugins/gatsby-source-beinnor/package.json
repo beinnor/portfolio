@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-source-beinnor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby-source-filesystem": "^2.1.43",
+    "node-fetch": "^2.6.0"
+  }
+}
