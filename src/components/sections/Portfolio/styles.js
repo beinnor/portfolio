@@ -3,17 +3,19 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
   min-height: 100vh;
   background: #485564;
-  padding: 5% 10% 10% 5%;
+  padding: 2rem;
+  text-align: center;
 `;
 
 export const Projects = styled.div`
   display: grid;
   grid-gap: 0.7rem;
+  margin: 1rem 0 1rem 0;
   grid-template-columns: repeat(3, 1fr);
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;

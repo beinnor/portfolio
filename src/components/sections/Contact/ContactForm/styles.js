@@ -32,11 +32,15 @@ export const Textarea = styled.textarea`
   height: 100px;
   width: 100%;
   resize: none;
+  border-radius: 4px;
+  padding: 4px;
 `;
 
 export const Input = styled.input`
   width: 100%;
   resize: none;
+  border-radius: 4px;
+  padding: 4px;
 `;
 
 export const Button = styled.button`
