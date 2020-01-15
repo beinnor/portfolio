@@ -1,11 +1,11 @@
 import React from 'react';
 import { SocialLinks } from '../common/SocialLinks';
 
-import { TopWrapper, BottomWrapper } from './styles';
+import { FooterWrapper, TopWrapper, BottomWrapper } from './styles';
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterWrapper>
       <TopWrapper>
         <nav>
           <ul>
@@ -26,11 +26,10 @@ const Footer = () => {
         <SocialLinks />
       </TopWrapper>
       <BottomWrapper>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        by {new Date().getFullYear()}{' '}
+        <a href="http://beinnor.netlify.com/">Beinnor</a>
       </BottomWrapper>
-    </footer>
+    </FooterWrapper>
   );
 };
 
