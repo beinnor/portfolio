@@ -15,9 +15,7 @@ export const Form = styled.form`
 `;
 
 export const FormHeading = styled.h1`
-  display: block;
-  color: white;
-  margin-bottom: 1rem;
+  
 `;
 
 export const Fieldset = styled.fieldset`

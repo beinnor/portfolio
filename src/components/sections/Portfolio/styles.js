@@ -28,29 +28,48 @@ export const Item = styled.div`
   border: 1px solid black;
   h3 {
     text-align: center;
+    color: black;
+    margin-bottom: .5rem;
   }
+  p {
+    margin-top: .5rem;
+  }
+  img {
+    border: 1px solid black;
+  }
+  color: black;
+  background: #ececec;
 `;
 
 export const Image = styled.div`
   width: 100%;
-  border: 2px black solid;
-  opacity: 0.8;
-
-  &:hover {
-    opacity: 1;
-    border-color: white;
-  }
 `;
 
 export const Stats = styled.div`
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  div {
+    margin: 0 1rem 0 1rem;
+  }
 `;
 
 export const Button = styled.a`
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem 1rem;
-  border: 1px solid black;
+  margin-top: .5rem;
   margin-bottom: 0.3rem;
+  border: 1px solid black;
+  background: #464646;
+  &:hover {
+    background: #485564;
+    text-decoration: none;
+  }
+  svg {
+    margin-right: .5rem;
+  }
+  
 `;

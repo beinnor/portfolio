@@ -2,12 +2,16 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   min-height: 100vh;
-  background: #526f7a;
+  background: rgb(72,85,100);
+  background: -moz-linear-gradient(0deg, rgba(72,85,100,1) 0%, rgba(34,35,36,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(72,85,100,1) 0%, rgba(34,35,36,1) 100%);
+  background: linear-gradient(0deg, rgba(72,85,100,1) 0%, rgba(34,35,36,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#485564",endColorstr="#222324",GradientType=1); 
   padding: 2rem 10rem 2rem 10rem;
-  color: #fafafa;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  
 
   @media (max-width: 700px) {
     padding: 2rem;
@@ -15,8 +19,6 @@ export const Wrapper = styled.section`
 `;
 
 export const Paragraph = styled.p`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 `;
 
 export const ImageWrapper = styled.div`

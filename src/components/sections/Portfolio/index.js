@@ -74,10 +74,13 @@ export const Portfolio = () => {
             <p>{node.description}</p>
             <Stats>
               <div>
-                <GoStar>{node.stargazers.totalCount}</GoStar>
+                <GoStar />
+                {' ' + node.stargazers.totalCount}
               </div>
+            
               <div>
-                <GoRepoForked>{node.forkCount}</GoRepoForked>
+                <GoRepoForked />
+                {' ' + node.forkCount}
               </div>
             </Stats>
             <Button href={node.url} target="_blank" rel="noopener noreferrer">
