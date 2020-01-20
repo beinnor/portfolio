@@ -7,20 +7,12 @@ export const Wrapper = styled.section`
   justify-content: center;
   padding: 0 30px;
   text-align: center;
-  background: #485564;
-  color: #fafafa;
+  background: #222324;
 `;
 
-export const Headline = styled.h1`
-  font-size: 3.75em;
-  font-weight: 600;
-`;
+export const Headline = styled.h1``;
 
-export const SubHeadline = styled.div`
-  font-size: 1.5rem;
-  margin: 1.5rem 0;
-  font-weight: 100;
-`;
+export const SubHeadline = styled.div``;
 
 export const SocialIcons = styled.div`
   svg {
