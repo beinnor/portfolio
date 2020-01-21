@@ -2,8 +2,9 @@
   "name": "portfolio",
   "private": true,
   "description": "My new 2020 personal portfolio",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "author": "Ronnie Bjørkelund <ronnie.bjorkelund@gmail.com>",
+  "homepage": "https://beinnor.netlify.com",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "dotenv": "^8.2.0",
