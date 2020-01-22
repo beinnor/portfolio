@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 export const About = () => {
   const portrait = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "portrait1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -27,19 +27,13 @@ export const About = () => {
       </ImageWrapper>
       <article>
         <Paragraph>
-          I am a hobbyist coder. I love javascript and html most. But also play
-          around in other languages sometimes.
+          I like coding. It's my hobby. Javascript is my favourite language, but
+          I also have some experience in other languages such as C and Python.
         </Paragraph>
         <Paragraph>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          I made this portfolio page with Gatsby. It uses a custom plugin to
+          pull data from GitHub API v4 (GraphQl), and displays data from my
+          pinned repositories.
         </Paragraph>
       </article>
     </Wrapper>
