@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-background: #222324; 
+  background: #222324;
 `;
 
 export const TopWrapper = styled.div`

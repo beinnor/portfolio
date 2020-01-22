@@ -77,7 +77,7 @@ export const Portfolio = () => {
                 <GoStar />
                 {' ' + node.stargazers.totalCount}
               </div>
-            
+
               <div>
                 <GoRepoForked />
                 {' ' + node.forkCount}

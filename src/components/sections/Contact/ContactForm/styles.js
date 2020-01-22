@@ -14,9 +14,7 @@ export const Form = styled.form`
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 `;
 
-export const FormHeading = styled.h1`
-  
-`;
+export const FormHeading = styled.h1``;
 
 export const Fieldset = styled.fieldset`
   border: medium none !important;

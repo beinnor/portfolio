@@ -6,16 +6,16 @@ const linkColor = theme.bodyColor;
 theme.overrideThemeStyles = ({ rhythm }, options) => ({
   a: {
     color: linkColor,
-    textDecoration: "none",
+    textDecoration: 'none',
     backgroundImage: 'none',
     textShadow: 'none',
   },
-  "a:hover,a:active": {
+  'a:hover,a:active': {
     textDecoration: 'underline',
-    textShadow: "none",
-    backgroundImage: "none",
-  }, 
-})
+    textShadow: 'none',
+    backgroundImage: 'none',
+  },
+});
 
 const typography = new Typography(theme);
 export const { scale, rhythm, options } = typography;

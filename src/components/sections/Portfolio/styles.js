@@ -29,10 +29,10 @@ export const Item = styled.div`
   h3 {
     text-align: center;
     color: black;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   p {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
   img {
     border: 1px solid black;
@@ -60,7 +60,7 @@ export const Button = styled.a`
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.3rem;
   border: 1px solid black;
   background: #464646;
@@ -69,7 +69,6 @@ export const Button = styled.a`
     text-decoration: none;
   }
   svg {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
-  
 `;
