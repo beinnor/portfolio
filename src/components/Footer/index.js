@@ -1,28 +1,13 @@
 import React from 'react';
 import { SocialLinks } from '../common/SocialLinks';
-
+import { NavLinks } from '../common/NavLinks';
 import { FooterWrapper, TopWrapper, BottomWrapper } from './styles';
 
 const Footer = () => {
   return (
     <FooterWrapper>
       <TopWrapper>
-        <nav>
-          <ul>
-            <li>
-              <a href="#landing">Scroll to top</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <NavLinks />
         <SocialLinks />
       </TopWrapper>
       <BottomWrapper>

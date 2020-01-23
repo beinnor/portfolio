@@ -1,5 +1,6 @@
 import React from 'react';
 import { SEO, Layout } from '../components/common';
+import { NavMenu } from '../components/NavMenu';
 import { Landing, About, Portfolio, Contact } from '../components/sections';
 
 const IndexPage = () => (
@@ -9,6 +10,7 @@ const IndexPage = () => (
     <About />
     <Portfolio />
     <Contact />
+    <NavMenu />
   </Layout>
 );
 
