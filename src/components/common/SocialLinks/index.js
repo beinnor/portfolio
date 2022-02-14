@@ -17,19 +17,7 @@ export const SocialLinks = () => (
     >
       <HiddenText>Github</HiddenText>
       <FaGithub />
-    </a>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://twitter.com/ronniebjork"
-    >
-      <HiddenText>Twitter</HiddenText>
-      <FaTwitter />
-    </a>
-    <a target="_blank" rel="noopener noreferrer" href="https://dev.to/beinnor">
-      <HiddenText>Dev.to</HiddenText>
-      <FaDev />
-    </a>
+    </a>   
     <a
       target="_blank"
       rel="noopener noreferrer"

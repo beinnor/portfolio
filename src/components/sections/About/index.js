@@ -28,7 +28,7 @@ export const About = () => {
       <article>
         <Paragraph>
           I like coding. It's my hobby. Javascript is my favourite language, but
-          I also have some experience in other languages such as C and Python.
+          I also have some experience with C# and .Net.
         </Paragraph>
         <Paragraph>
           I made this portfolio page with Gatsby. It uses a custom plugin to
